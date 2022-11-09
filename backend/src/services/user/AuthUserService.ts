@@ -11,7 +11,8 @@ class AuthUserService {
   async execute({ email, password }: AuthRequest) {
     const user = await prismaClient.user.findFirst({
       where: {
-        email: email
+        email: email,
+        deleted: false
       }
     })
 

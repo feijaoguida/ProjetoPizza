@@ -1,10 +1,8 @@
 import { Router, Request, Response } from 'express'
 
-import { CreateUserController } from './controllers/user/CreateUserController';
-import { AuthRequestController } from './controllers/user/AuthUserController';
-import { DetailUserController } from './controllers/user/DetailUserController';
+import { CreateUserController, AuthRequestController, DetailUserController } from './controllers/user';
 
-import { CreateCategoryController } from './controllers/category/CreateCategoryController';
+import { CreateCategoryController, ListCategoryController, DeleteCategoryController, UpdateCategoryController } from './controllers/category';
 
 import { isAuthenticated } from './middlewares/isAuthenticated';
 
@@ -19,5 +17,8 @@ router.use(isAuthenticated)
 router.get('/me', new DetailUserController().handle)
 
 router.post("/category", new CreateCategoryController().handle)
+router.get("/category", new ListCategoryController().handle)
+router.delete("/category", new DeleteCategoryController().handle)
+router.put("/category", new UpdateCategoryController().handle)
 
 export { router };

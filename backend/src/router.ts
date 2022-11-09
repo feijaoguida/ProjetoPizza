@@ -1,17 +1,17 @@
 import { Router, Request, Response } from 'express'
 
 import { CreateUserController, AuthRequestController, DetailUserController } from './controllers/user';
-
 import { CreateCategoryController, ListCategoryController, DeleteCategoryController, UpdateCategoryController } from './controllers/category';
-
 import { isAuthenticated } from './middlewares/isAuthenticated';
 
 const router = Router();
 
+// Rotas Livres
 router.post('/users', new CreateUserController().handle)
 
 router.post('/session', new AuthRequestController().handle)
 
+// Rotas com Middleware isAuthenticated
 router.use(isAuthenticated)
 
 router.get('/me', new DetailUserController().handle)

@@ -1,0 +1,126 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "SuperLanche",
+      "description": "Sistema para constroles de pedidos e atentimento.",
+      "version": "1.0"
+    },
+    "host": "localhost:3333",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/users": {
+        "post": {
+          "description": "Cadastra usuário.",
+          "consumes": "application/json",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "name",
+              "description": "Nome do Usuário",
+              "type": "string"
+            },
+            {
+                "in": "body",
+                "name": "email",
+                "description": "email do Usuário",
+                "type": "string"
+              },
+              {
+                "in": "body",
+                "name": "password",
+                "description": "senha do Usuário",
+                "type": "string"
+              }
+            
+          ],
+          "responses": {
+            "201": {
+  
+            }
+          }
+        }
+      },
+      "/session": {
+        "post": {
+          "description": "Recomendação de Genero Musical.",
+          "consumes": "application/json",
+          "parameters": [
+            {
+              "in": "query",
+              "name": "seed_genres",
+              "description": "Informe o Genero desejado. Ex. 'pagode'",
+              "type": "string"
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "description": "Informe o Limite desejado para retorno",
+              "type": "number"
+            }
+            
+          ],
+          "responses": {
+            "201": {
+                "description": "successful operation",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/todosResponse"
+                    }
+                }
+  
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+        "todosResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                     "type": "integer"
+                },
+                "task": {
+                    "type": "string"
+                },
+                "assignee": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "Task": {
+            "type": "object",
+            "properties": {
+                "task": {
+                    "type": "string"
+                },
+                "assignee": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "InvalidResponse": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+  
+        }
+    }
+
+  }

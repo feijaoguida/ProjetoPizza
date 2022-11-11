@@ -1,9 +1,11 @@
 import express, { Request, Response, NextFunction } from 'express'
 import 'express-async-errors'
 import cors from 'cors'
-import { router } from './router'
-import swaggerUi from 'swagger-ui-express'
+import path from 'path'
 
+import { router } from './router'
+
+import swaggerUi from 'swagger-ui-express'
 import swaggerDocument from '../swagger.json'
 
 const app = express();
@@ -17,6 +19,11 @@ app.use(
 )
 
 app.use(router);
+
+app.use(
+  '/files',
+  express.static(path.resolve(__dirname, '..', 'images'))
+)
 
 app.use((err: Error, req: Request, res: Response, nest: NextFunction) => {
   if (err instanceof Error) {

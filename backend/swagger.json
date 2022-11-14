@@ -15,27 +15,15 @@
         "post": {
           "description": "Cadastra usuário.",
           "consumes": "application/json",
-          "parameters": [
-            {
+          "parameters": [{
               "in": "body",
-              "name": "name",
-              "description": "Nome do Usuário",
-              "type": "string"
-            },
-            {
-                "in": "body",
-                "name": "email",
-                "description": "email do Usuário",
-                "type": "string"
-              },
-              {
-                "in": "body",
-                "name": "password",
-                "description": "senha do Usuário",
-                "type": "string"
-              }
-            
-          ],
+              "name": "Usuário",
+              "description": "Dados do Usuário para Cadastro",
+              "type": "object",
+              "schema": {
+                "$ref": "#/definitions/todosResponse"
+              } 
+          }],
           "responses": {
             "201": {
   
@@ -81,16 +69,13 @@
         "todosResponse": {
             "type": "object",
             "properties": {
-                "id": {
-                     "type": "integer"
+                "name": {
+                  "type": "string"
                 },
-                "task": {
+                "email": {
                     "type": "string"
                 },
-                "assignee": {
-                    "type": "string"
-                },
-                "status": {
+                "password": {
                     "type": "string"
                 }
             }

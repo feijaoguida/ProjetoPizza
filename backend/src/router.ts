@@ -4,7 +4,7 @@ import multer from 'multer';
 import { CreateUserController, AuthRequestController, DetailUserController } from './controllers/user';
 import { CreateCategoryController, ListCategoryController, DeleteCategoryController, UpdateCategoryController } from './controllers/category';
 import { isAuthenticated } from './middlewares/isAuthenticated';
-import { CreateProductController } from './controllers/product';
+import { CreateProductController, ListByCategoryController, ListProductsController } from './controllers/product';
 
 import uploadConfig from './config/multer'
 
@@ -30,5 +30,7 @@ router.put("/category", new UpdateCategoryController().handle)
 
 // Product
 router.post("/product", upload.single('file'), new CreateProductController().handle)
+router.get("/category/product", new ListByCategoryController().handle)
+router.get("/product", new ListProductsController().handle)
 
 export { router };

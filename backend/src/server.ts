@@ -37,4 +37,6 @@ app.use((err: Error, req: Request, res: Response, nest: NextFunction) => {
   })
 })
 
-app.listen(3333, () => console.log("Servidor online na porta 3333")) 
+const port = process.env.PORT || 3333
+
+app.listen(port, () => console.log(`Servidor online na porta ${port}`)) 

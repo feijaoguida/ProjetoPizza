@@ -8,7 +8,6 @@ interface DataDetailUpdate {
 class UpdateCategoryService{
   async execute(
     data: DataDetailUpdate) {
-    console.log("data services = ", data)
     const categoryList = await prismaClient.category.update({
       where: {
         id: data.id

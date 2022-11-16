@@ -13,6 +13,10 @@ const router = Router();
 
 const upload = multer(uploadConfig.upload("./images"))
 
+router.get('/', (req: Request, res: Response) => {
+  return res.json({ Ok: true})
+})
+
 // Rotas Livres
 router.post('/users', new CreateUserController().handle)
 

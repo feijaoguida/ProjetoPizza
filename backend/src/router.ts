@@ -5,7 +5,7 @@ import { CreateUserController, AuthRequestController, DetailUserController } fro
 import { CreateCategoryController, ListCategoryController, DeleteCategoryController, UpdateCategoryController } from './controllers/category';
 import { isAuthenticated } from './middlewares/isAuthenticated';
 import { CreateProductController, ListByCategoryController, ListProductsController } from './controllers/product';
-import { AddItemController, CreateOrderController, RemoveOrderController, RemoveItemController, SendOrderController, ListOrderController, DetailOrderController, FinishOrderController } from './controllers/order';
+import { AddItemController, CreateOrderController, RemoveOrderController, RemoveItemController, SendOrderController, ListOrderController, DetailOrderController, FinishOrderController, ListAllOrderController } from './controllers/order';
 
 import uploadConfig from './config/multer'
 
@@ -14,7 +14,7 @@ const router = Router();
 const upload = multer(uploadConfig.upload("./images"))
 
 router.get('/', (req: Request, res: Response) => {
-  return res.json({ Ok: true})
+  return res.json({ Ok: true })
 })
 
 // Rotas Livres
@@ -45,6 +45,7 @@ router.post("/order/add", new AddItemController().handle)
 router.delete("/order/remove", new RemoveItemController().handle)
 router.put("/order/send", new SendOrderController().handle)
 router.get("/orders", new ListOrderController().handle)
+router.get("/allOrders", new ListAllOrderController().handle)
 router.get("/order/detail", new DetailOrderController().handle)
 router.put("/order/finish", new FinishOrderController().handle)
 

@@ -20,10 +20,13 @@ interface CategoryProps {
 
 export default function Product({ categoryList }: CategoryProps) {
   const [name, setName] = useState('')
+  const [price, setPrice] = useState('')
+  const [description, setDescription] = useState('')
   const [avatarUrl, setAvatarUrl] = useState('')
   const [categories, setCategories] = useState(categoryList || [])
   const [categorySelected, setCategorySelected] = useState(0)
   const [imageAvatar, setImageAvatar] = useState<File | null>(null)
+
 
   function handlefile(e: ChangeEvent<HTMLInputElement>) {
     if (!e.target.files) {
@@ -40,18 +43,35 @@ export default function Product({ categoryList }: CategoryProps) {
   async function handleRegister(event: FormEvent) {
     event.preventDefault();
 
-    if (name === '') {
-      
-      toast.warning("Informe um nome da categoria")
+    if (name === '' || price === '' || description === '' || imageAvatar === null) {
+      toast.warning("Informe todos os campos!")
       return;
     }
 
-    await api.post('/category', {
-      name: name
-    })
+    try {
+      const data = new FormData();
 
-    toast.success("Categoria Cadastrada com sucesso")
-    setName('')
+      data.append('name', name);
+      data.append('price', price);
+      data.append('description', description);
+      data.append('category_id', categories[categorySelected].id);
+      data.append('file', imageAvatar);
+      
+      await api.post('/product', data)
+      
+      toast.success("Produto Cadastrado com sucesso")
+      setName('')
+      setPrice('')
+      setDescription('')
+      setImageAvatar(null)
+      setAvatarUrl('')
+      setCategorySelected(0)
+      
+    } catch (error) {
+      console.log(error);
+      toast.error("Opss!!! erro ao Cadastrar!")
+    }
+
     
   }
 
@@ -110,14 +130,14 @@ export default function Product({ categoryList }: CategoryProps) {
               type="text"
               placeholder="Preço do produto"
               className={styles.input}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
             />
             <textarea
               placeholder="Descreva seu produto..."
               className={styles.input}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
             />
             <button className={styles.buttonAdd} type="submit">
               Cadastrar
@@ -134,8 +154,6 @@ export const getServerSideProps = canSSRAuth(async (ctx: any) => {
   const apiClient = setupAPIClient(ctx)
 
   const response = await apiClient.get('/category')
-
-  console.log(response.data)
   return {
     props: {
       categoryList: response.data

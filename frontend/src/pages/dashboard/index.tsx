@@ -45,7 +45,7 @@ export type OrderItemProps = {
 
 export default function Dashboard({ orders }: HomeProps) {
   const [orderList, setOrderList ] = useState(orders || [])
-  const [modalItem, setModalItem] = useState<OrderItemProps[]>()
+  const [modalItem, setModalItem] = useState<OrderItemProps[]>([])
   const [modalVisible, setModalVisible] = useState(false)
   const apiClient = setupAPIClient();
 
@@ -135,7 +135,7 @@ export default function Dashboard({ orders }: HomeProps) {
   )
 }
 
-export const getServerSideProps = canSSRAuth(async (ctx) => {
+export const getServerSideProps = canSSRAuth(async (ctx: any) => {
 
   const apiClient = setupAPIClient(ctx);
   const response = await apiClient.get("/orders");

@@ -37,4 +37,10 @@ app.use((err: Error, req: Request, res: Response, nest: NextFunction) => {
   })
 })
 
-app.listen(process.env.PORT || 3333) 
+const port = process.env.PORT || 3333
+
+app.listen(port, () => {
+  console.log("server running in port: " + port)
+} ) 
+
+export { app }

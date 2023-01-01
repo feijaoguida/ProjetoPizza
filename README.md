@@ -35,11 +35,11 @@ Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
 ## 🎁 Expressões de gratidão
 
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
+* Super recomendo a aquisição do curso 📢;
+* [Projeto Completo NodeJS, React, React Native, TypeScript
+](https://www.udemy.com/share/106djC3@QA3Rn4P8jjz9JZCttXtG926kbFYaR877bHA9stCPzIXooNwES5sA6ugTshae7N8r/);
+
 
 
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+⌨️ com ❤️ por [Roseweltty Guida](https://www.linkedin.com/in/rosewelttybguida/) 😊

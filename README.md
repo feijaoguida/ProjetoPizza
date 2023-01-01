@@ -39,6 +39,16 @@ Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 * [Projeto Completo NodeJS, React, React Native, TypeScript
 ](https://www.udemy.com/share/106djC3@QA3Rn4P8jjz9JZCttXtG926kbFYaR877bHA9stCPzIXooNwES5sA6ugTshae7N8r/);
 
+## 🚀 Paginas do Projeto
+
+![page1](https://user-images.githubusercontent.com/6312819/210184505-cf4a8cff-1a45-429e-bce3-a76a36df945e.png)
+![page2-criando-conta](https://user-images.githubusercontent.com/6312819/210184511-8e5a59e3-88a7-4724-a322-bfa537fa37c2.png)
+![page3-dashboard](https://user-images.githubusercontent.com/6312819/210184512-72efe281-3bb1-4f50-b3c4-728e02881e47.png)
+![page4-detalhes-pedido](https://user-images.githubusercontent.com/6312819/210184513-1e4d1664-aed8-4e03-9682-4cda8fc0e244.png)
+![page5-cadastrar-categorias](https://user-images.githubusercontent.com/6312819/210184515-5c1c1ae4-e30d-449a-ad09-64e093c91ccf.png)
+![page6-cadastrando-produto](https://user-images.githubusercontent.com/6312819/210184516-521ce25b-faa8-48f1-91dd-a8144cc1a909.png)
+
+
 
 
 ---

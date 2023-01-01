@@ -13,9 +13,11 @@ Em Frontend esta o projeto NextJs para criação do front, area "administrativa/
 Em Mobile esta o projeto feito em React-Native com a area que deve ser acessada pelo Garço no atendimento das mesas.
 
 
-## 📦 Implantação
+## 📦 Acessando OnLine
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+O projeto BackEnd foi hospedado no Servidor [fly.io](https://fly.io/)
+O Frontend esta hospedado na [vercel](https://vercel.com/) e pode ser acessado online no link [https://superlanche.vercel.app](https://superlanche.vercel.app/)
+O Mobile Foi construido em ReactNative utilizando o [Expo.dev](https://expo.dev) o apk de instalação para android pode ser baixado [aqui](https://drive.google.com/drive/folders/1FZ7XHwGTuOMC2cnCsAgmPxATC_Liq9Wy?usp=share_link)
 
 ## 🛠️ Construído com
 

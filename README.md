@@ -50,6 +50,10 @@ Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 ![page5-cadastrar-categorias](https://user-images.githubusercontent.com/6312819/210184515-5c1c1ae4-e30d-449a-ad09-64e093c91ccf.png)
 ![page6-cadastrando-produto](https://user-images.githubusercontent.com/6312819/210184516-521ce25b-faa8-48f1-91dd-a8144cc1a909.png)
 
+![Screenshot_20230102-082901](https://user-images.githubusercontent.com/6312819/210232570-a4ddbc16-9807-4beb-bef6-cf9596139136.png)
+![Screenshot_20230102-075108](https://user-images.githubusercontent.com/6312819/210232577-585c7c81-8869-457c-9da8-effe8b76542d.png)
+![Screenshot_20230102-075236](https://user-images.githubusercontent.com/6312819/210232590-63dddc0e-2cd1-4e4f-ba7a-d5533403c6f1.png)
+![Screenshot_20230102-075231](https://user-images.githubusercontent.com/6312819/210232597-c608241b-fe8d-4638-a3ca-0b7b8157530e.png)
 
 
 

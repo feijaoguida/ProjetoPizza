@@ -17,7 +17,7 @@ Em Mobile esta o projeto feito em React-Native com a area que deve ser acessada 
 
 O projeto BackEnd foi hospedado no Servidor [fly.io](https://fly.io/)
 O Frontend esta hospedado na [vercel](https://vercel.com/) e pode ser acessado online no link [https://superlanche.vercel.app](https://superlanche.vercel.app/)
-O Mobile Foi construido em ReactNative utilizando o [Expo.dev](https://expo.dev) o apk de instalação para android pode ser baixado [aqui]([https://1024terabox.com/s/1WRDbbf4Smwktb0Gr8EZVNw])
+O Mobile Foi construido em ReactNative utilizando o [Expo.dev](https://expo.dev) o apk de instalação para android pode ser baixado [aqui](https://1024terabox.com/s/1WRDbbf4Smwktb0Gr8EZVNw)
 Usuário de senhas de Teste: Usuario: teste@teste.com senha: 123123
 
 ## 🛠️ Construído com
